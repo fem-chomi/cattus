@@ -1,4 +1,9 @@
-class SQLite3(IDatabase):
+from typing import List
+from Interface.IDatabase import IDatabase
+from Model.EntityModel import EntityModel
+
+
+class SQLServer(IDatabase):
     def __init__(self):
         super().__init__(DatabaseType.SQLITE3)
 
