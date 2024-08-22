@@ -1,7 +1,7 @@
 from abc import ABCMeta, abstractmethod
 from enum import Enum
 from typing import List, Dict, Set
-from Config.ClassTypeConfig import ClassType, ClassTypeConfig, DtoClassType, DtoBuilderClassType, EntityClassType, EntityBuilderClassType, ValueObjectClassType, DaoClassType, SearchConditionClassType, SortConditionClassType, FilterConditionClassType, ListClassType, MapClassType, KeyClassType
+from Config.ClassTypeConfig import ClassType, ClassTypeConfig, DtoClassTypeConfig, DtoBuilderClassTypeConfig, EntityClassTypeConfig, EntityBuilderClassTypeConfig, ValueObjectClassTypeConfig, DaoClassTypeConfig, SearchConditionClassTypeConfig, SortConditionClassTypeConfig, FilterConditionClassTypeConfig, ListClassTypeConfig, MapClassTypeConfig, KeyClassTypeConfig
 from Config.ConstructorConfig import ConstructorType, ConstructorConfig, FullConstructor, OmitConstructor, DefaultConstructor, CopyConstructor, CopyDtoConstructor, CopyEntityConstructor
 from Config.DataTypeConfig import DataType, DataTypeConfig
 from Config.FunctionConfig import FunctionType, FunctionConfig
@@ -32,18 +32,18 @@ class IProgrammingLanguage(metaclass=ABCMeta):
 
         # クラスタイプのコンフィグ設定のテーブル引き用の連想配列
         self.__ClassTypeConfigMap: Dict[ClassType, ClassTypeConfig] = {}
-        self.__ClassTypeConfigMap[ClassType.DTO] = DtoClassType()
-        self.__ClassTypeConfigMap[ClassType.DTO_BUILDER] = DtoBuilderClassType()
-        self.__ClassTypeConfigMap[ClassType.ENTITY] = EntityClassType()
-        self.__ClassTypeConfigMap[ClassType.ENTITY_BUILDER] = EntityBuilderClassType()
-        self.__ClassTypeConfigMap[ClassType.VALUE_OBJECT] = ValueObjectClassType()
-        self.__ClassTypeConfigMap[ClassType.DAO] = DaoClassType()
-        self.__ClassTypeConfigMap[ClassType.SEARCH_CONDITION] = SearchConditionClassType()
-        self.__ClassTypeConfigMap[ClassType.SORT_CONDITION] = SortConditionClassType()
-        self.__ClassTypeConfigMap[ClassType.FILTER_CONDITION] = FilterConditionClassType()
-        self.__ClassTypeConfigMap[ClassType.LIST] = ListClassType()
-        self.__ClassTypeConfigMap[ClassType.MAP] = MapClassType()
-        self.__ClassTypeConfigMap[ClassType.KEY] = KeyClassType()
+        self.__ClassTypeConfigMap[ClassType.DTO] = DtoClassTypeConfig()
+        self.__ClassTypeConfigMap[ClassType.DTO_BUILDER] = DtoBuilderClassTypeConfig()
+        self.__ClassTypeConfigMap[ClassType.ENTITY] = EntityClassTypeConfig()
+        self.__ClassTypeConfigMap[ClassType.ENTITY_BUILDER] = EntityBuilderClassTypeConfig()
+        self.__ClassTypeConfigMap[ClassType.VALUE_OBJECT] = ValueObjectClassTypeConfig()
+        self.__ClassTypeConfigMap[ClassType.DAO] = DaoClassTypeConfig()
+        self.__ClassTypeConfigMap[ClassType.SEARCH_CONDITION] = SearchConditionClassTypeConfig()
+        self.__ClassTypeConfigMap[ClassType.SORT_CONDITION] = SortConditionClassTypeConfig()
+        self.__ClassTypeConfigMap[ClassType.FILTER_CONDITION] = FilterConditionClassTypeConfig()
+        self.__ClassTypeConfigMap[ClassType.LIST] = ListClassTypeConfig()
+        self.__ClassTypeConfigMap[ClassType.MAP] = MapClassTypeConfig()
+        self.__ClassTypeConfigMap[ClassType.KEY] = KeyClassTypeConfig()
 
         # コンストラクタのテーブル引き用の連想配列
         self.__ConstructorConfigMap: Dict[ConstructorType, ConstructorConfig] = {}

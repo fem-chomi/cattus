@@ -316,7 +316,7 @@ class ClassTypeConfig():
         return temp
 
 
-class DtoClassType(ClassTypeConfig):
+class DtoClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True
@@ -361,7 +361,7 @@ class DtoClassType(ClassTypeConfig):
             enablePythonSpecialDataClass)
 
 
-class DtoBuilderClassType(ClassTypeConfig):
+class DtoBuilderClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True
@@ -406,7 +406,7 @@ class DtoBuilderClassType(ClassTypeConfig):
             enablePythonSpecialDataClass)
 
 
-class EntityClassType(ClassTypeConfig):
+class EntityClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True
@@ -451,7 +451,7 @@ class EntityClassType(ClassTypeConfig):
             enablePythonSpecialDataClass)
 
 
-class EntityBuilderClassType(ClassTypeConfig):
+class EntityBuilderClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True
@@ -496,7 +496,7 @@ class EntityBuilderClassType(ClassTypeConfig):
             enablePythonSpecialDataClass)
 
 
-class ValueObjectClassType(ClassTypeConfig):
+class ValueObjectClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True
@@ -541,7 +541,7 @@ class ValueObjectClassType(ClassTypeConfig):
             enablePythonSpecialDataClass)
 
 
-class DaoClassType(ClassTypeConfig):
+class DaoClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True
@@ -586,7 +586,7 @@ class DaoClassType(ClassTypeConfig):
             enablePythonSpecialDataClass)
 
 
-class SearchConditionClassType(ClassTypeConfig):
+class SearchConditionClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True
@@ -631,7 +631,7 @@ class SearchConditionClassType(ClassTypeConfig):
             enablePythonSpecialDataClass)
 
 
-class SortConditionClassType(ClassTypeConfig):
+class SortConditionClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True
@@ -676,7 +676,7 @@ class SortConditionClassType(ClassTypeConfig):
             enablePythonSpecialDataClass)
 
 
-class FilterConditionClassType(ClassTypeConfig):
+class FilterConditionClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True
@@ -721,7 +721,7 @@ class FilterConditionClassType(ClassTypeConfig):
             enablePythonSpecialDataClass)
 
 
-class ListClassType(ClassTypeConfig):
+class ListClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True
@@ -766,7 +766,7 @@ class ListClassType(ClassTypeConfig):
             enablePythonSpecialDataClass)
 
 
-class MapClassType(ClassTypeConfig):
+class MapClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True
@@ -811,7 +811,7 @@ class MapClassType(ClassTypeConfig):
             enablePythonSpecialDataClass)
 
 
-class SetClassType(ClassTypeConfig):
+class SetClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True
@@ -856,7 +856,7 @@ class SetClassType(ClassTypeConfig):
             enablePythonSpecialDataClass)
 
 
-class KeyClassType(ClassTypeConfig):
+class KeyClassTypeConfig(ClassTypeConfig):
     def __init__(self):
         classSuffixName: str = ''
         enableNamespace: bool = True

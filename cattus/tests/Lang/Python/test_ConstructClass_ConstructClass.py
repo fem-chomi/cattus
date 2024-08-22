@@ -3,7 +3,7 @@ from unittest import TestCase
 from Lang.Python.PythonLanguage import PythonLanguage
 from Lang.Python.Integer import Int8, Int16, Int32, Int64
 from Generator.ConstructClass import ConstructClass
-from Config.ClassTypeConfig import ClassType, ClassTypeConfig, DtoClassType, DtoBuilderClassType, EntityClassType, EntityBuilderClassType, ValueObjectClassType, DaoClassType, SearchConditionClassType, SortConditionClassType, FilterConditionClassType, ListClassType, MapClassType, KeyClassType
+from Config.ClassTypeConfig import ClassType, ClassTypeConfig, DtoClassTypeConfig, DtoBuilderClassTypeConfig, EntityClassTypeConfig, EntityBuilderClassTypeConfig, ValueObjectClassTypeConfig, DaoClassTypeConfig, SearchConditionClassTypeConfig, SortConditionClassTypeConfig, FilterConditionClassTypeConfig, ListClassTypeConfig, MapClassTypeConfig, KeyClassTypeConfig
 from Model.EntityModel import EntityModel
 from Model.FieldDefine import FieldDefine
 from Util.Diff import Diff
@@ -35,7 +35,7 @@ class TestConstructClass_ConstructClass(TestCase):
         fieldDefineList.append(FieldDefine('IIII-JJJJ-KKKK', 'LLLL', Int16(), '2'))
         fieldDefineList.append(FieldDefine('MMMM-NNNN-OOOO', 'PPPP', Int32(), '3'))
         entityModel = EntityModel('AAAA-BBBB-CCCC', 'DDDD', fieldDefineList)
-        config = DtoClassType()
+        config = DtoClassTypeConfig()
         test.ConstructClass(entityModel, config)
         self.assertEqual(Diff.DiffFile('aaaa_bbbb_cccc_dto.generate.py', 'tests/Lang/Python/testdata/test_ConstructClass_aaaa_bbbb_cccc_dto.generate.py'), '')
 
@@ -47,7 +47,7 @@ class TestConstructClass_ConstructClass(TestCase):
         fieldDefineList.append(FieldDefine('IIII-JJJJ-KKKK', 'LLLL', Int16(), '2'))
         fieldDefineList.append(FieldDefine('MMMM-NNNN-OOOO', 'PPPP', Int32(), '3'))
         entityModel = EntityModel('AAAA-BBBB-CCCC', 'DDDD', fieldDefineList)
-        config = DtoBuilderClassType()
+        config = DtoBuilderClassTypeConfig()
         test.ConstructClass(entityModel, config)
         self.assertEqual(Diff.DiffFile('aaaa_bbbb_cccc_dto_builder.generate.py', 'tests/Lang/Python/testdata/test_ConstructClass_aaaa_bbbb_cccc_dto_builder.generate.py'), '')
 
@@ -59,7 +59,7 @@ class TestConstructClass_ConstructClass(TestCase):
         fieldDefineList.append(FieldDefine('IIII-JJJJ-KKKK', 'LLLL', Int16(), '2'))
         fieldDefineList.append(FieldDefine('MMMM-NNNN-OOOO', 'PPPP', Int32(), '3'))
         entityModel = EntityModel('AAAA-BBBB-CCCC', 'DDDD', fieldDefineList)
-        config = EntityClassType()
+        config = EntityClassTypeConfig()
         test.ConstructClass(entityModel, config)
         self.assertEqual(Diff.DiffFile('aaaa_bbbb_cccc_entity.generate.py', 'tests/Lang/Python/testdata/test_ConstructClass_aaaa_bbbb_cccc_entity.generate.py'), '')
 
@@ -71,6 +71,6 @@ class TestConstructClass_ConstructClass(TestCase):
         fieldDefineList.append(FieldDefine('IIII-JJJJ-KKKK', 'LLLL', Int16(), '2'))
         fieldDefineList.append(FieldDefine('MMMM-NNNN-OOOO', 'PPPP', Int32(), '3'))
         entityModel = EntityModel('AAAA-BBBB-CCCC', 'DDDD', fieldDefineList)
-        config = EntityBuilderClassType()
+        config = EntityBuilderClassTypeConfig()
         test.ConstructClass(entityModel, config)
         self.assertEqual(Diff.DiffFile('aaaa_bbbb_cccc_entity_builder.generate.py', 'tests/Lang/Python/testdata/test_ConstructClass_aaaa_bbbb_cccc_entity_builder.generate.py'), '')
