@@ -26,22 +26,6 @@ from Lang.Python.GetHashCode import GetHashCode
 from Lang.Python.Export import Export
 from Lang.Python.Import import Import
 from Lang.Python.Build import BuildDto, BuildEntity
-from Lang.Python.SQLite3.SQLite3 import SQLite3 #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.CreateTable import CreateTable #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.Insert import Insert #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.BulkInsert import BulkInsert #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.Modify import Modify #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.Update import Update #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.Upsert import Upsert #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.DeltaUpdate import DeltaUpdate #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.Delete import Delete #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.DeleteAll import DeleteAll #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.Select import Select #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.Search import Search #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.ReadRecord import ReadRecord #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.SelectAll import SelectAll #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.ContainsKey import ContainsKey #TODO Configからデータベースを指定して切り替えたい
-from Lang.Python.SQLite3.Count import Count #TODO Configからデータベースを指定して切り替えたい
 from Util.SourceLine import SourceLine
 from Util.NameConverter import NameConverter
 
@@ -58,23 +42,6 @@ class PythonLanguage(IProgrammingLanguage):
         self.__MethodConfigMap[MethodType.IMPORT] = Import()
         self.__MethodConfigMap[MethodType.BUILD_DTO] = BuildDto()
         self.__MethodConfigMap[MethodType.BUILD_ENTITY] = BuildEntity()
-
-        #TODO 下記のコードは固定なのでリコンパイルが必要なため、Configからデータベースを指定して切り替えたい
-        self.__MethodConfigMap[MethodType.CREATE_TABLE] = CreateTable()
-        self.__MethodConfigMap[MethodType.INSERT] = Insert()
-        self.__MethodConfigMap[MethodType.BULK_INSERT] = BulkInsert()
-        self.__MethodConfigMap[MethodType.MODIFY] = Modify()
-        self.__MethodConfigMap[MethodType.UPDATE] = Update()
-        self.__MethodConfigMap[MethodType.UPSERT] = Upsert()
-        self.__MethodConfigMap[MethodType.DELTA_UPDATE] = DeltaUpdate()
-        self.__MethodConfigMap[MethodType.DELETE] = Delete()
-        self.__MethodConfigMap[MethodType.DELETE_ALL] = DeleteAll()
-        self.__MethodConfigMap[MethodType.SELECT] = Select()
-        self.__MethodConfigMap[MethodType.SEARCH] = Search()
-        self.__MethodConfigMap[MethodType.READ_RECORD] = ReadRecord()
-        self.__MethodConfigMap[MethodType.SELECT_ALL] = SelectAll()
-        self.__MethodConfigMap[MethodType.CONTAINS_KEY] = ContainsKey()
-        self.__MethodConfigMap[MethodType.COUNT] = Count()
 
         # 関数のテーブル引き用の連想配列
         self.__FunctionConfigMap: Dict[FunctionType, FunctionConfig] = {}

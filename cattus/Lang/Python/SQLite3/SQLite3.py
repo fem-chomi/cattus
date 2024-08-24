@@ -1,6 +1,7 @@
 from typing import List
-from Interface.IDatabase import IDatabase
+from Interface.IDatabase import DatabaseType, IDatabase
 from Model.EntityModel import EntityModel
+from Model.FieldDefine import FieldDefine
 
 
 class SQLite3(IDatabase):
@@ -35,7 +36,7 @@ class SQLite3(IDatabase):
         codes: List[str] = []
         return codes
 
-    def GenerateRemove(self, entityModel: EntityModel) -> List[str]:
+    def GenerateDelete(self, entityModel: EntityModel) -> List[str]:
         codes: List[str] = []
         return codes
 

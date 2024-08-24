@@ -60,24 +60,8 @@ class ClassTypeConfig():
             enableBuildDto: bool=False, \
             enableBuildEntity: bool=False, \
             enableImmutable: bool=False, \
-            enablePythonSpecialDataClass: bool=False, \
+            enablePythonSpecialDataClass: bool=False):
 
-            # DAO
-            createTable: bool=False, \
-            insert: bool=False, \
-            bulkInsert: bool=False, \
-            modify: bool=False, \
-            update: bool=False, \
-            upsert: bool=False, \
-            deltaUpdate: bool=False, \
-            delete: bool=False, \
-            deleteAll: bool=False, \
-            select: bool=False, \
-            search: bool=False, \
-            readRecord: bool=False, \
-            selectAll: bool=False, \
-            containsKey: bool=False, \
-            count: bool=False):
         self.__Type: ClassType = type
         if classSuffixName != '':
             self.__ClassSuffixName: str = classSuffixName
@@ -105,113 +89,96 @@ class ClassTypeConfig():
         self.__EnableImmutable: bool = enableImmutable
         self.__EnablePythonSpecialDataClass: bool = enablePythonSpecialDataClass
 
-        # DAO
-        self.__CreateTable: bool = createTable
-        self.__Insert: bool = insert
-        self.__BulkInsert: bool = bulkInsert
-        self.__Modify: bool = modify
-        self.__Update: bool = update
-        self.__Upsert: bool = upsert
-        self.__DeltaUpdate: bool = deltaUpdate
-        self.__Delete: bool = delete
-        self.__DeleteAll: bool = deleteAll
-        self.__Select: bool = select
-        self.__Search: bool = search
-        self.__ReadRecord: bool = readRecord
-        self.__SelectAll: bool = selectAll
-        self.__ContainsKey: bool = containsKey
-        self.__Count: bool = count
-
     @property
     def Type(self) -> ClassType:
         return self.__Type
 
-    # Namespaceを有効化する
+    # Namespaceの有効性
     @property
     def EnableNamespace(self) -> bool:
         return self.__EnableNamespace
 
-    # Classを有効化する
+    # Classの有効性
     @property
     def EnableClass(self) -> bool:
         return self.__EnableClass
 
-    # Fieldを有効化する
+    # Fieldの有効性
     @property
     def EnableField(self) -> bool:
         return self.__EnableField
 
-    # Propertyを有効化する
+    # Propertyの有効性
     @property
     def EnableProperty(self) -> bool:
         return self.__EnableProperty
 
-    # FullConstructorを有効化する
+    # FullConstructorの有効性
     @property
     def EnableFullConstructor(self) -> bool:
         return self.__EnableFullConstructor
 
-    # OmitConstructorを有効化する
+    # OmitConstructorの有効性
     @property
     def EnableOmitConstructor(self) -> bool:
         return self.__EnableOmitConstructor
 
-    # CopyConstructorを有効化する
+    # CopyConstructorの有効性
     @property
     def EnableCopyConstructor(self) -> bool:
         return self.__EnableCopyConstructor
 
-    # CopyDtoConstructorを有効化する
+    # CopyDtoConstructorの有効性
     @property
     def EnableCopyDtoConstructor(self) -> bool:
         return self.__EnableCopyDtoConstructor
 
-    # CopyEntityConstructorを有効化する
+    # CopyEntityConstructorの有効性
     @property
     def EnableCopyEntityConstructor(self) -> bool:
         return self.__EnableCopyEntityConstructor
 
-    # ToStringを有効化する
+    # ToStringの有効性
     @property
     def EnableToString(self) -> bool:
         return self.__EnableToString
 
-    # Equalを有効化する
+    # Equalの有効性
     @property
     def EnableEqual(self) -> bool:
         return self.__EnableEqual
 
-    # CompareToを有効化する
+    # CompareToの有効性
     @property
     def EnableCompareTo(self) -> bool:
         return self.__EnableCompareTo
 
-    # GetHashCodeを有効化する
+    # GetHashCodeの有効性
     @property
     def EnableGetHashCode(self) -> bool:
         return self.__EnableGetHashCode
 
-    # Exportを有効化する
+    # Exportの有効性
     @property
     def EnableExport(self) -> bool:
         return self.__EnableExport
 
-    # Importを有効化する
+    # Importの有効性
     @property
     def EnableImport(self) -> bool:
         return self.__EnableImport
 
-    # BuildDtoを有効化する
+    # BuildDtoの有効性
     @property
     def EnableBuildDto(self) -> bool:
         return self.__EnableBuildDto
 
-    # BuildEntityを有効化する
+    # BuildEntityの有効性
     @property
     def EnableBuildEntity(self) -> bool:
         return self.__EnableBuildEntity
 
-    # イミュータブルを有効化する
+    # イミュータブルの有効性
     @property
     def EnableImmutable(self) -> bool:
         return self.__EnableImmutable
@@ -223,66 +190,6 @@ class ClassTypeConfig():
     @property
     def EnablePythonSpecialDataClass(self) -> bool:
         return self.__EnablePythonSpecialDataClass
-
-    @property
-    def CreateTable(self) -> bool:
-        return self.__CreateTable
-
-    @property
-    def Insert(self) -> bool:
-        return self.__Insert
-
-    @property
-    def BulkInsert(self) -> bool:
-        return self.__BulkInsert
-
-    @property
-    def Modify(self) -> bool:
-        return self.__Modify
-
-    @property
-    def Update(self) -> bool:
-        return self.__Update
-
-    @property
-    def Upsert(self) -> bool:
-        return self.__Upsert
-
-    @property
-    def DeltaUpdate(self) -> bool:
-        return self.__DeltaUpdate
-
-    @property
-    def Delete(self) -> bool:
-        return self.__Delete
-
-    @property
-    def DeleteAll(self) -> bool:
-        return self.__DeleteAll
-
-    @property
-    def Select(self) -> bool:
-        return self.__Select
-
-    @property
-    def Search(self) -> bool:
-        return self.__Search
-
-    @property
-    def ReadRecord(self) -> bool:
-        return self.__ReadRecord
-
-    @property
-    def SelectAll(self) -> bool:
-        return self.__SelectAll
-
-    @property
-    def ContainsKey(self) -> bool:
-        return self.__ContainsKey
-
-    @property
-    def Count(self) -> bool:
-        return self.__Count
 
     def ConvertClassType(self, type: ClassType, classSuffixName: str='') -> Self:
         _classSuffixName = ''
